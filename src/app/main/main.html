@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
+  <div class="jumbotron text-center">
+    <h1 ng-bind-html="winner"></h1>
+    <p class="lead" ng-hide="resultGiven">
+      Wait, how many people showed up tonight?
+    </p>
+    <form role="form" ng-hide="resultGiven">
+      <div class="form-group">
+        <input type="text" class="form-control" id="groupCount" placeholder="100?" ng-model="numberOfPeople" style="max-width: 200px; display: inline-block;">
+      </div>
+      <p>
+        <button type="submit" class="btn btn-lg btn-success" ng-click="getRandomNumber()">Randomize</button>
+      </p>
+    </form>
+  </div>
+
+</div>
